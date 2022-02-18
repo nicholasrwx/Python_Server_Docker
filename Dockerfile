@@ -6,5 +6,7 @@ COPY src/* ${SRC_DIR}/
 
 WORKDIR ${SRC_DIR}
 
-CMD ["python", "python_server.yml"]
+ENV PYTHONUNBUFFERED=1
+
+CMD ["python", "python_server.py"]
 
