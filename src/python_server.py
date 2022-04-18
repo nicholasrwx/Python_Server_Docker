@@ -13,7 +13,6 @@ def run(ADDRESS=os.environ['ADDRESS'], PORT=int(os.environ['PORT']), server_clas
   # it is a very Simple HTTP Req Handler compared to the Base Req Handler.
   # server_class() = HTTPServer, this is a socketserver.TCPServer SUBCLASS. It creates and listens to at the HTTP socket
   # it dispatches requests, to a request handler
-
   httpd = server_class(server_address, handler_class)
 
   print("launching server")
@@ -22,6 +21,7 @@ def run(ADDRESS=os.environ['ADDRESS'], PORT=int(os.environ['PORT']), server_clas
   # Polls for shutdown every poll_interval seconds. Ignores the timeout attribute.
   # it is a method inside our server class.
   httpd.serve_forever()
+  handler_class.do_GET()
 
 if __name__ ==  "__main__":
   # pass address and port as ENV variables from the global scope
