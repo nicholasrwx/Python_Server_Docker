@@ -21,7 +21,7 @@ def run(ADDRESS=os.environ['ADDRESS'], PORT=int(os.environ['PORT']), server_clas
   # Polls for shutdown every poll_interval seconds. Ignores the timeout attribute.
   # it is a method inside our server class.
   httpd.serve_forever()
-  handler_class.do_GET()
+  # handler_class.do_GET()
 
 if __name__ ==  "__main__":
   # pass address and port as ENV variables from the global scope
