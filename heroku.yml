@@ -1,5 +1,3 @@
 build:
   docker:
     web: Dockerfile
-    port:
-      - 8000:8000

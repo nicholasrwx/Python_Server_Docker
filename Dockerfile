@@ -8,9 +8,7 @@ WORKDIR ${SRC_DIR}
 
 ENV PYTHONUNBUFFERED=1
 
-ENV ADDRESS=https://qr-python-server.herokuapp.com
-ENV PORT=8000
-EXPOSE 8000
+ENV ADDRESS='0.0.0.0'
 
 CMD ["python", "python_server.py"]
 

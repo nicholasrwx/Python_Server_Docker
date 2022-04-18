@@ -1,11 +1,11 @@
+import os
+
 from http.server import HTTPServer,  SimpleHTTPRequestHandler
 
-def run(ADDRESS, PORT, server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler):
-  ADDRESS=None
-  PORT=None
+def run(ADDRESS=os.environ['ADDRESS'], PORT=int(os.environ['PORT']), server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler):
 
   # server_address = A Tuple containing a string address, and a number port - address depends on type of server protocol
-  server_address = (ADDRESS, int(PORT))
+  server_address = (ADDRESS, PORT)
 
   # handler_class = a user provided request handler class, an instance of this class is created for every request
   # in this case, our handler_class is set to the SimpleHTTPRequestHandler provided by pthon
